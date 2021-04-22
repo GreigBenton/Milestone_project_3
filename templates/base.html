@@ -14,31 +14,37 @@
 <body>
 
     <header>
-        <nav class="nav-extended orange darken-3">
+        <nav class="nav-extended amber darken-3">
             <div class="nav-wrapper">
               <a href="{{ url_for('get_books') }}" class="brand-logo nav-logo black-text">THE BOOK FINDER</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right black-text"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li class><a href="{{ url_for('get_books') }}" class="nav-icon white-text">Home</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}" class="nav-icon white-text">Profile</a></li>
-                <li><a href="" class="nav-icon white-text">Share Book</a></li>
-                <li><a href="" class="nav-icon white-text">Add Genre</a></li>
-                <li><a href="" class="nav-icon white-text">Log Out</a></li>
-                <li><a href="{{ url_for('login') }}" class="nav-icon white-text">Log In</a></li>
-                <li><a href="{{ url_for('register') }}" class="nav-icon white-text">Sign Up</a></li>
+                {% if session.user %}
+                  <li><a href="{{ url_for('profile', username=session['user']) }}" class="nav-icon white-text">Profile</a></li>
+                  <li><a href="" class="nav-icon white-text">Share Book</a></li>
+                  <li><a href="" class="nav-icon white-text">Add Genre</a></li>
+                  <li><a href="{{ url_for('logout') }}" class="nav-icon white-text">Log Out</a></li>
+                {% else %}
+                  <li><a href="{{ url_for('login') }}" class="nav-icon white-text">Log In</a></li>
+                  <li><a href="{{ url_for('register') }}" class="nav-icon white-text">Sign Up</a></li>
+                {% endif%}
               </ul>
             </div>
           </nav>
         
           <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align nav-logo">The Book Finder</h4></li>
-            <li class><a href="{{ url_for('get_books') }}" class="nav-icon">Home</a></li>
-            <li class="nav-icon"><a href="" class="nav-icon">Profile</a></li>
-            <li><a href="" class="nav-icon">Share Book</a></li>
-            <li><a href="" class="nav-icon">Add Genre</a></li>
-            <li><a href="" class="nav-icon">Log Out</a></li>
-            <li><a href="{{ url_for('login') }}" class="nav-icon">Log In</a></li>
-            <li><a href="{{ url_for('register') }}" class="nav-icon">Sign Up</a></li>
+            <a href="{{ url_for('get_books') }}" class="brand-logo nav-logo center-align black-text">THE BOOK FINDER</a>
+            <li class><a href="{{ url_for('get_books') }}" class="nav-icon black-text">Home</a></li>
+                {% if session.user %}
+                  <li><a href="{{ url_for('profile', username=session['user']) }}" class="nav-icon black-text">Profile</a></li>
+                  <li><a href="" class="nav-icon black-text">Share Book</a></li>
+                  <li><a href="" class="nav-icon black-text">Add Genre</a></li>
+                  <li><a href="{{ url_for('logout') }}" class="nav-icon black-text">Log Out</a></li>
+                {% else %}
+                  <li><a href="{{ url_for('login') }}" class="nav-icon black-text">Log In</a></li>
+                  <li><a href="{{ url_for('register') }}" class="nav-icon black-text">Sign Up</a></li>
+                {% endif%} 
           </ul>
     </header>
 
