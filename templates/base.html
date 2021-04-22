@@ -14,18 +14,18 @@
 <body>
 
     <header>
-        <nav class="nav-extended amber lighten-4">
+        <nav class="nav-extended transparent">
             <div class="nav-wrapper">
-              <a href="{{ url_for('get_books') }}" class="brand-logo nav-logo">The Book Finder</a>
+              <a href="{{ url_for('get_books') }}" class="brand-logo nav-logo orange-text text-darken-3">THE BOOK FINDER</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right black-text"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
-                <li class><a href="{{ url_for('get_books') }}" class="nav-icon">Home</a></li>
-                <li class><a href="" class="nav-icon">Profile</a></li>
-                <li class><a href="" class="nav-icon">Share Book</a></li>
-                <li class><a href="" class="nav-icon">Add Genre</a></li>
-                <li class><a href="" class="nav-icon">Log Out</a></li>
-                <li class><a href="" class="nav-icon">Log In</a></li>
-                <li class><a href="" class="nav-icon">Sign Up</a></li>
+                <li class><a href="{{ url_for('get_books') }}" class="nav-icon orange-text text-darken-3">Home</a></li>
+                <li><a href="" class="nav-icon orange-text text-darken-3">Profile</a></li>
+                <li><a href="" class="nav-icon orange-text text-darken-3">Share Book</a></li>
+                <li><a href="" class="nav-icon orange-text text-darken-3">Add Genre</a></li>
+                <li><a href="" class="nav-icon orange-text text-darken-3">Log Out</a></li>
+                <li><a href="" class="nav-icon orange-text text-darken-3">Log In</a></li>
+                <li><a href="{{ url_for('register') }}" class="nav-icon orange-text text-darken-3">Sign Up</a></li>
               </ul>
             </div>
           </nav>
@@ -33,12 +33,12 @@
           <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align nav-logo">The Book Finder</h4></li>
             <li class><a href="{{ url_for('get_books') }}" class="nav-icon">Home</a></li>
-            <li class><a href="" class="nav-icon">Profile</a></li>
-            <li class><a href="" class="nav-icon">Share Book</a></li>
-            <li class><a href="" class="nav-icon">Add Genre</a></li>
-            <li class><a href="" class="nav-icon">Log Out</a></li>
-            <li class><a href="" class="nav-icon">Log In</a></li>
-            <li class><a href="" class="nav-icon">Sign Up</a></li>
+            <li class="nav-icon"><a href="" class="nav-icon">Profile</a></li>
+            <li><a href="" class="nav-icon">Share Book</a></li>
+            <li><a href="" class="nav-icon">Add Genre</a></li>
+            <li><a href="" class="nav-icon">Log Out</a></li>
+            <li><a href="" class="nav-icon">Log In</a></li>
+            <li><a href="{{ url_for('register') }}" class="nav-icon">Sign Up</a></li>
           </ul>
     </header>
 
