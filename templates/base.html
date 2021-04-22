@@ -24,7 +24,7 @@
                 <li><a href="" class="nav-icon white-text">Share Book</a></li>
                 <li><a href="" class="nav-icon white-text">Add Genre</a></li>
                 <li><a href="" class="nav-icon white-text">Log Out</a></li>
-                <li><a href="" class="nav-icon white-text">Log In</a></li>
+                <li><a href="{{ url_for('login') }}" class="nav-icon white-text">Log In</a></li>
                 <li><a href="{{ url_for('register') }}" class="nav-icon white-text">Sign Up</a></li>
               </ul>
             </div>
@@ -37,7 +37,7 @@
             <li><a href="" class="nav-icon">Share Book</a></li>
             <li><a href="" class="nav-icon">Add Genre</a></li>
             <li><a href="" class="nav-icon">Log Out</a></li>
-            <li><a href="" class="nav-icon">Log In</a></li>
+            <li><a href="{{ url_for('login') }}" class="nav-icon">Log In</a></li>
             <li><a href="{{ url_for('register') }}" class="nav-icon">Sign Up</a></li>
           </ul>
     </header>
