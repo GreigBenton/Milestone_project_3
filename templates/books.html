@@ -11,18 +11,19 @@
     {% endfor %}
 
     <ul class="collapsible">
+        {% for book in books %}
         <li>
-            <div class="collapsible-header amber darken-3"><i class="fas fa-caret-down"></i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header amber darken-3">
+                <i class="fas fa-caret-down"></i>
+                <span class="collapse-head">{{ book.book_name }}</span> : {{ book.genre_name }}
+            </div>
+            <div class="collapsible-body">
+                <span class="collapse-head">{{ book.author_name }}</span> : {{ book.published_date }}
+                <p>{{ book.book_description }}</p>
+                <p>{{ book.book_link }}</p>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header amber darken-3"><i class="fas fa-caret-down"></i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header amber darken-3"><i class="fas fa-caret-down"></i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-      </ul>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
