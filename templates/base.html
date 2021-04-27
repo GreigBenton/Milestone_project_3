@@ -22,7 +22,7 @@
                 <li class><a href="{{ url_for('get_books') }}" class="nav-icon white-text">Home</a></li>
                 {% if session.user %}
                   <li><a href="{{ url_for('profile', username=session['user']) }}" class="nav-icon white-text">Profile</a></li>
-                  <li><a href="" class="nav-icon white-text">Share Book</a></li>
+                  <li><a href="{{ url_for('add_book') }}" class="nav-icon white-text">Share Book</a></li>
                   <li><a href="" class="nav-icon white-text">Add Genre</a></li>
                   <li><a href="{{ url_for('logout') }}" class="nav-icon white-text">Log Out</a></li>
                 {% else %}
@@ -38,7 +38,7 @@
             <li class><a href="{{ url_for('get_books') }}" class="nav-icon black-text">Home</a></li>
                 {% if session.user %}
                   <li><a href="{{ url_for('profile', username=session['user']) }}" class="nav-icon black-text">Profile</a></li>
-                  <li><a href="" class="nav-icon black-text">Share Book</a></li>
+                  <li><a href="{{ url_for('add_book') }}" class="nav-icon black-text">Share Book</a></li>
                   <li><a href="" class="nav-icon black-text">Add Genre</a></li>
                   <li><a href="{{ url_for('logout') }}" class="nav-icon black-text">Log Out</a></li>
                 {% else %}
