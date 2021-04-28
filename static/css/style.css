@@ -22,4 +22,11 @@
 
 .collapse-head {
     font-weight: 700;
+    margin: 5px;
+    line-height: 42px;
+    text-transform: uppercase;
+}
+
+.btn-small {
+    margin: 5px;
 }

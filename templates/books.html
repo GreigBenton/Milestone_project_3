@@ -7,11 +7,17 @@
         {% for book in books %}
         <li>
             <div class="collapsible-header amber darken-3">
-                <i class="fas fa-caret-down"></i>
-                <span class="collapse-head">{{ book.book_name }}</span> : {{ book.genre_name }}
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>
+                    <a href="" class="btn-small green">Finished</a>
+                    <a href="" class="btn-small light-blue">Edit</a>
+                </div>
+                <div class="col s9">
+                    <span class="collapse-head">{{ book.book_name }}</span>: {{ book.genre_name }}
+                </div>
             </div>
             <div class="collapsible-body">
-                <span class="collapse-head">{{ book.author_name }}</span> : {{ book.published_date }}
+                <span class="collapse-head">{{ book.author_name }}</span>: {{ book.published_date }}
                 <p>{{ book.book_description }}</p>
                 <p><a href="{{ book.book_link }}">PURCHASE</a></p>
                 <p><em>shared by: {{ book.created_by }}</em></p>
