@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align nav-logo">Update Book</h3>
+
+    <div class="row card-panel amber darken-3">
+        <form class="col s12" method="POST" action="{{ url_for('edit_book', book_id=book._id) }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-list-alt prefix tooltipped data-position="bottom" data-tooltip="Choose a Genre"></i>
+                    <select id="genre_name" name="genre_name" class="validate" required>
+                      <option value="" disabled selected>Choose Genre</option>
+                      {% for genre in genres %}
+                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                      {% endfor %}
+                    </select>
+                    <label for="genre_name">Genre Select</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-book-medical prefix tooltipped data-position="bottom" data-tooltip="E.g. Alice's Adventures in Wonderland"></i>
+                    <input id="book_name" name="book_name" type="text" minlength="1" maxlength="200" class="validate" required>
+                    <label for="book_name">Book Title</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-edit prefix tooltipped data-position="bottom" data-tooltip="E.g. Lewis Carroll"></i>
+                    <input id="author_name" name="author_name" type="text" minlength="1" maxlength="200" class="validate" required>
+                    <label for="author_name">Author Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar prefix tooltipped data-position="bottom" data-tooltip="Year of publish e.g. 1865"></i>
+                    <input id="published_date" name="published_date" type="text" minlength="4" maxlength="4" class="validate" required>
+                    <label for="published_date">Published Date</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix tooltipped data-position="bottom" data-tooltip="A brief description of the books contents/storyline etc."></i>
+                    <textarea id="book_description" name="book_description" minlength="100" maxlength="1000" class="materialize-textarea validate" required></textarea>
+                    <label for="book_description">Book Summary</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-shopping-cart prefix tooltipped data-position="bottom" data-tooltip="A link to purchase this book"></i>
+                    <input id="book_link" name="book_link" type="text" minlength="10" maxlength="200" class="validate" required>
+                    <label for="book_link">Purchase Link</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large black-text">
+                        Update Book <i class="fas fa-thumbs-up right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+      </div>
+
+{% endblock %}
