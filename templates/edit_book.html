@@ -9,9 +9,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-list-alt prefix tooltipped data-position="bottom" data-tooltip="Choose a Genre"></i>
                     <select id="genre_name" name="genre_name" class="validate" required>
-                      <option value="" disabled selected>Choose Genre</option>
+                      <option value="" disabled>Choose Genre</option>
                       {% for genre in genres %}
-                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        {% if genre.genre_name == book.genre_name %}
+                            <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option>
+                        {% else %}
+                            <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        {% endif %}    
                       {% endfor %}
                     </select>
                     <label for="genre_name">Genre Select</label>
@@ -20,40 +24,43 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-book-medical prefix tooltipped data-position="bottom" data-tooltip="E.g. Alice's Adventures in Wonderland"></i>
-                    <input id="book_name" name="book_name" type="text" minlength="1" maxlength="200" class="validate" required>
+                    <input id="book_name" name="book_name" type="text" minlength="1" maxlength="200" value="{{ book.book_name }}" class="validate" required>
                     <label for="book_name">Book Title</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-edit prefix tooltipped data-position="bottom" data-tooltip="E.g. Lewis Carroll"></i>
-                    <input id="author_name" name="author_name" type="text" minlength="1" maxlength="200" class="validate" required>
+                    <input id="author_name" name="author_name" type="text" minlength="1" maxlength="200" value="{{ book.author_name }}" class="validate" required>
                     <label for="author_name">Author Name</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar prefix tooltipped data-position="bottom" data-tooltip="Year of publish e.g. 1865"></i>
-                    <input id="published_date" name="published_date" type="text" minlength="4" maxlength="4" class="validate" required>
+                    <input id="published_date" name="published_date" type="text" minlength="4" maxlength="4" value="{{ book.published_date }}" class="validate" required>
                     <label for="published_date">Published Date</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix tooltipped data-position="bottom" data-tooltip="A brief description of the books contents/storyline etc."></i>
-                    <textarea id="book_description" name="book_description" minlength="100" maxlength="1000" class="materialize-textarea validate" required></textarea>
+                    <textarea id="book_description" name="book_description" minlength="100" maxlength="1000" class="materialize-textarea validate" required>{{ book.book_description }}</textarea>
                     <label for="book_description">Book Summary</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-shopping-cart prefix tooltipped data-position="bottom" data-tooltip="A link to purchase this book"></i>
-                    <input id="book_link" name="book_link" type="text" minlength="10" maxlength="200" class="validate" required>
+                    <input id="book_link" name="book_link" type="text" minlength="10" maxlength="200" value="{{ book.book_link }}" class="validate" required>
                     <label for="book_link">Purchase Link</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 center-align">
+                    <a href="{{ url_for('get_books') }}" class="btn-large red black-text">
+                        Cancel Changes <i class="fas fa-thumbs-down right"></i>
+                    </a>
                     <button type="submit" class="btn-large black-text">
                         Update Book <i class="fas fa-thumbs-up right"></i>
                     </button>
