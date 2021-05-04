@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align nav-logo">Add Genre</h3>
+    <h3 class="center-align nav-logo">Genres</h3>
+    
+    <div class="row">
+        <div class="col s12 center-align">
+            <a href="{{ url_for('add_genre') }}" class="btn-large light-blue">
+                Add Genre
+            </a>
+        </div>
+    </div>
 
     <div class="row">
         {% for genre in genres %}
