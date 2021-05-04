@@ -24,7 +24,7 @@
                   <li><a href="{{ url_for('profile', username=session['user']) }}" class="nav-icon white-text">Profile</a></li>
                   <li><a href="{{ url_for('add_book') }}" class="nav-icon white-text">Share Book</a></li>
                   {% if session.user|lower == "admin"|lower %}
-                    <li><a href="{{ url_for('get_genres') }}" class="nav-icon white-text">Add Genre</a></li>
+                    <li><a href="{{ url_for('get_genres') }}" class="nav-icon white-text">Genres</a></li>
                   {% endif %}
                   <li><a href="{{ url_for('logout') }}" class="nav-icon white-text">Log Out</a></li>
                 {% else %}
