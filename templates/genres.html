@@ -19,7 +19,17 @@
                         <span class="card-title">{{ genre.genre_name }}</span>
                     </div>
                     <div class="card-action">
-                        <a href="{{ url_for('delete_genre', genre_id=genre._id) }}" class="btn green">Remove</a>
+                        <a href="#modal1" class="btn green modal-trigger">
+                            Remove
+                        </a>
+                        <div id="modal1" class="modal">
+                                <div class="modal-content">
+                                    <h4>Are you sure?</h4>
+                                    <a href="{{ url_for('get_genres') }}" class="modal-close btn-flate-large black-text">No</a>
+                                    <a href="{{ url_for('delete_genre', genre_id=genre._id) }}" class="modal-close btn-flat-large black-text">Yes</a>
+                                </div>
+                            </div>
+
                         <a href="{{ url_for('edit_genre', genre_id=genre._id) }}" class="btn light-blue">Edit</a>
                     </div>
                 </div>
@@ -28,4 +38,5 @@
     </div>
 
   {% endblock %}
+
             
