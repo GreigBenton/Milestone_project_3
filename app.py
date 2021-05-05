@@ -30,6 +30,7 @@ def search():
     books = list(mongo.db.books.find({"$text": {"$search": query}}))
     return render_template("books.html", books=books)
 
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -101,9 +102,11 @@ def add_book():
         book = {
             "genre_name": request.form.get("genre_name"),
             "book_name": request.form.get("book_name"),
+            "book_image": request.form.get("book_image"),
             "author_name": request.form.get("author_name"),
             "published_date": request.form.get("published_date"),
             "book_description": request.form.get("book_description"),
+            "book_review": request.form.get("book_review"),
             "book_link": request.form.get("book_link"),
             "created_by": session["user"]
         }
@@ -121,14 +124,17 @@ def edit_book(book_id):
         submit = {
             "genre_name": request.form.get("genre_name"),
             "book_name": request.form.get("book_name"),
+            "book_image": request.form.get("book_image"),
             "author_name": request.form.get("author_name"),
             "published_date": request.form.get("published_date"),
             "book_description": request.form.get("book_description"),
+            "book_review": request.form.get("book_review"),
             "book_link": request.form.get("book_link"),
             "created_by": session["user"]
         }
         mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
         flash("Book updated!")
+        return redirect(url_for("get_books"))
 
     book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     genres = mongo.db.genres.find().sort("genre_name", 1)

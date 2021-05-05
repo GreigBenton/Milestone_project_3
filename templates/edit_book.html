@@ -44,6 +44,13 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
+                    <i class="fas fa-image prefix tooltipped data-position="bottom" data-tooltip="An image link of the book cover"></i>
+                    <input id="book_image" name="book_image" type="text" minlength="10" maxlength="200" value="{{ book.book_image }}" class="validate" required>
+                    <label for="book_image">Book Image</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix tooltipped data-position="bottom" data-tooltip="A brief description of the books contents/storyline etc."></i>
                     <textarea id="book_description" name="book_description" minlength="100" maxlength="1000" class="materialize-textarea validate" required>{{ book.book_description }}</textarea>
                     <label for="book_description">Book Summary</label>
@@ -54,6 +61,13 @@
                     <i class="fas fa-shopping-cart prefix tooltipped data-position="bottom" data-tooltip="A link to purchase this book"></i>
                     <input id="book_link" name="book_link" type="text" minlength="10" maxlength="200" value="{{ book.book_link }}" class="validate" required>
                     <label for="book_link">Purchase Link</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-glasses prefix tooltipped data-position="bottom" data-tooltip="What did you think of this book?"></i>
+                    <textarea id="book_review" name="book_review" minlength="25" maxlength="1000" class="materialize-textarea validate" required>{{ book.book_review }}</textarea>
+                    <label for="book_review">Your Thoughts</label>
                 </div>
             </div>
             <div class="row">

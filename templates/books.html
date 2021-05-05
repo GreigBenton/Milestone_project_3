@@ -39,10 +39,19 @@
                     </div>
                 </div>
                 <div class="collapsible-body">
-                    <span class="collapse-head">{{ book.author_name }}</span>: {{ book.published_date }}
-                    <p>{{ book.book_description }}</p>
-                    <p><a href="{{ book.book_link }}" target="blank">PURCHASE</a></p>
-                    <p><em>shared by: {{ book.created_by }}</em></p>
+                    <p class="collapse-head center-align">{{ book.author_name }} : {{ book.published_date }}</p>
+                    <div class="row">
+                        <div class="col s6 center-align">
+                            <img src="{{ book.book_image }}" alt="{{ book.book_name }}" class="book_image">
+                        </div>
+                        <div class="col s6">
+                            <p>{{ book.book_description }}</p>
+                        </div>
+                    </div>
+                    <p class="center-align"><a href="{{ book.book_link }}" target="blank">PURCHASE</a></p>
+                    <p class="review_head">USER REVIEW</p>
+                    <p class="review_body">{{ book.book_review }}</p>
+                    <p class="teal-text"><em>shared and reviewed by: {{ book.created_by }}</em></p>
                 </div>
             </li>
             {% endfor %}

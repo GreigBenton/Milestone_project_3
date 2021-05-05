@@ -30,3 +30,16 @@
 .btn-small {
     margin: 5px;
 }
+
+.book_image {
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 20px;
+}
+
+.review_head {
+    font-family: 'Orelega One', cursive;
+    font-size: 120%;
+    line-height: 5px;
+    margin-top: 50px;
+}
