@@ -10,13 +10,25 @@ A collection and database of community suggested and reviewed books which allows
 
 * As a new user I want to know upon viewing the site what options I have in terms of signing up/registering and viewing the sites content. I want this to be presented via a clear and navigatable menu.
 
+<img width="1280" alt="Screenshot 2021-05-07 at 15 11 03" src="https://user-images.githubusercontent.com/68287350/117462835-f2bd5d00-af46-11eb-9920-ef4dfa6b8dab.png">
+
+<img width="1280" alt="Screenshot 2021-05-07 at 15 11 16" src="https://user-images.githubusercontent.com/68287350/117462951-0ff22b80-af47-11eb-8c1e-a23900cc390c.png">
+
 * As a user I want to be able to separate books I have shared from those other users/members of the community have shared. I want this to be displayed via a separate Profile page which will allow me to edit/change previously uploaded content and the ability to remove content should I no longer wish to share this information.
+
+<img width="1114" alt="Screenshot 2021-05-07 at 15 11 43" src="https://user-images.githubusercontent.com/68287350/117463007-1ed8de00-af47-11eb-9629-bfc38c0725f6.png">
 
 * As a user viewing the site I want to know key details at a glance including Genre etc so that I can pinpoint and hone my search.
 
+<img width="909" alt="Screenshot 2021-05-07 at 15 12 08" src="https://user-images.githubusercontent.com/68287350/117463069-2ef0bd80-af47-11eb-8855-4c04d34ecc4c.png">
+
 * As a user I want to be able to view extended information once I see a book/information that interests me. This information should include a book cover image, a brief summary of the work and purchase information.
 
+<img width="896" alt="Screenshot 2021-05-07 at 15 12 34" src="https://user-images.githubusercontent.com/68287350/117463105-3748f880-af47-11eb-83e1-5645513fe21b.png">
+
 * As a user I want to be able to view different user's opinions about the book I am researching/looking at so that I can make a more informed decision about whether or not to purchase/read the aforementioned book.
+
+<img width="897" alt="Screenshot 2021-05-07 at 15 12 46" src="https://user-images.githubusercontent.com/68287350/117463148-4465e780-af47-11eb-8d14-d2ad98fdb59a.png">
 
 ## Features
 
