@@ -43,3 +43,15 @@
     line-height: 5px;
     margin-top: 50px;
 }
+
+nav .brand-logo {
+    font-size: 1.5rem;
+}
+
+.genre_main {
+    font-family: 'Orelega One', cursive;
+}
+
+.profile-li {
+    cursor: default;
+}
