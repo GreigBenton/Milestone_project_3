@@ -187,15 +187,16 @@ A collection and database of community suggested and reviewed books which allows
         - Each use of the edit button resulted in the user being directed to the edit template as intended.
         - Each use of the remove button resulted in the selected and associated entry being removed. Upon checking and referring back to MONGODB the entry was also removed from the database as intended.
 
-#### Share Book page
+#### Share/Edit Book page
 
 1. **Expected Results** 
         
         - When visiting the share book navigation link the user should be directed to the correct template.
         - When on the share book template and hovering over the field icons a tooltip should appear presenting further information/examples.
-        - When sharing a book if the user attempts to input incorrect data/values the field should display a message if the currently input data doesn't meet the field standards.
+        - When sharing/editing a book if the user attempts to input incorrect data/values the field should display a message if the currently input data doesn't meet the field standards.
         - When a user confirms the listing the user should be redirected to the home page with an accompanying success flash.
         - When sharing a book if a user decides to cancel their entry they should be redirected to the home page.
+        - When editing a book the initial data should be represented upon the page being loaded so that the user can see the data they will be replacing.
 2. **Reasons for testing** 
 
         - Search functionality is incredibly important as to be a useful database the community needs to be able to filter results based on their desires and tastes. A poorly executed search function or one limited in scope will result in poor UX.
