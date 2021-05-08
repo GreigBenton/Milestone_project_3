@@ -229,9 +229,7 @@ A collection and database of community suggested and reviewed books which allows
 4. Clicks 'Clone'
 
 #### Differences deployed and development version
-1. Upon initial deployment background/hero images were not loading.
-2. Resolved via updating file paths for these images within the style.css file.
-3. No further differences between deployed and development versions.
+1. No changes in deployed version to note
 
 ## Credits
 
