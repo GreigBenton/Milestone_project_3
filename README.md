@@ -79,6 +79,53 @@ A collection and database of community suggested and reviewed books which allows
 * [JQuery](https://jquery.com/)
     * Used to allow functionality of dropdown menus in conjunction with Materialize framework 
 
+## Testing
+
+#### Navigation Links/bar
+1. **Expected Results**
+
+        - All links should open their associate html file successfully from all pages. 
+        - Site logo should navigate user back to index.html page/landing page.
+2. **Reasons for testing**
+
+        - User performs extensive testing on this feature as this is the user's main port of call for navigating through the site.
+        - If links are broken then user is unable to access full content.
+3. **Tests performed**
+
+        - To test links are working correctly and are opening appropriate HTML the user visits each link from each HTML page, ensuring that each link opens appropriate file and can navigate the entire site via each page.
+        - To test logo is directing users back to index.html the user clicks this logo from each page and ensures that they are redirected back to the landing page.
+4. **Testing Results**
+
+        - Each link opened the appropriate page when clicked on from each html page as intended.
+        - Clicking logo from each page resulted in the user being directed back to landing page as intended.
+
+#### Sign-Up/Login functionality
+
+1. **Expected Results**
+
+        - Both username and password fields should display as red if incorrect value type has been input/entered. 
+        - Password field should be encrypted and not displayed when entering password.
+        - Upon signing up/logging in the user should be rdirected to the correct page with accompanying Flash/info to inform user of success.
+        - Upon signing up, user data including username and hashed password should be inserted into database.
+        - Upon logging in the user should be redirected to their profile page.
+2. **Reasons for testing**
+
+        - The ability to share books and effectively build the content of the site is dependent on users being able to sign-up and login. 
+        - If a user has an issue when signing up they are unlikely to return to use the site. This is a bad user experience.
+        - If a users password security is compromised this can cause data breaches and potentially break GDPR protocols.
+3. **Tests performed**
+
+        - Used dummy accounts to test login/sign-up process. 
+        - Entered username and password field and then left field without entering value data to see if defensive programming would activate.
+        - Checked MONGODB for inserted data upon signup
+
+4. **Testing Results**
+
+        - Upon signing up/logging in. User is redirected to their personal profile page as intended.
+        - Upon signing up. New user data is inserted into appropriate database collection as intended.
+        - When inputting/entering username/password if incorrect or unsuitable values are entered the form will not let the user continue with process as intended.
+
+
 ## Deployment
 1. Throughout project development, use of 'git add' and 'git commit' functions within project terminal to save changes and document development process. Each commit message explains and shows changes since the last version and provides information to users viewing the repository.
 2. Throughout development regular use of 'git push' function. This function pushes changed/new code to GitHub and ensures the code is safe and protected from potential loss or system/cloud error.
@@ -87,7 +134,7 @@ A collection and database of community suggested and reviewed books which allows
 4. From here visit Settings to find deployment steps.
 5. Scroll down to the GitHub pages section.
 6. Ensure the master branch is selected and *Save*.
-7. Project is now visible and live @ *https://github.com/GreigBenton/Milestone_project_3* **AND** *https://dashboard.heroku.com/apps/milestone-3-book-database.*
+7. Project is now visible and live @ *https://github.com/GreigBenton/Milestone_project_3* **AND** *https://milestone-3-book-database.herokuapp.com/.*
 
 #### Local Cloning
 1. After downloading GitHub Desktop user logs into to their GitHub profile
