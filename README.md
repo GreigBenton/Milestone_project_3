@@ -108,6 +108,7 @@ A collection and database of community suggested and reviewed books which allows
         - Upon signing up/logging in the user should be rdirected to the correct page with accompanying Flash/info to inform user of success.
         - Upon signing up, user data including username and hashed password should be inserted into database.
         - Upon logging in the user should be redirected to their profile page.
+        - Upon logging out the user should be redirected to the correct page and any user options other than Home etc should not be visible.
 2. **Reasons for testing**
 
         - The ability to share books and effectively build the content of the site is dependent on users being able to sign-up and login. 
@@ -118,12 +119,96 @@ A collection and database of community suggested and reviewed books which allows
         - Used dummy accounts to test login/sign-up process. 
         - Entered username and password field and then left field without entering value data to see if defensive programming would activate.
         - Checked MONGODB for inserted data upon signup
-
 4. **Testing Results**
 
         - Upon signing up/logging in. User is redirected to their personal profile page as intended.
         - Upon signing up. New user data is inserted into appropriate database collection as intended.
         - When inputting/entering username/password if incorrect or unsuitable values are entered the form will not let the user continue with process as intended.
+        - Upon signing out user was redirected to the appropriate page.
+
+#### Home page - Search functionality
+
+1. **Expected Results** 
+        
+        - When searching and submitting form, user should be presented with any data entries that meets search criteria via Book name, author name, genre or book description. Picking up keywords and displaying the appropriate entries.
+        - Upon resetting the search form all data/list entries should appear
+        - When searching, if no results are found then a message should appear to show the user that their search hasn't yielded any results.
+2. **Reasons for testing** 
+
+        - Search functionality is incredibly important as to be a useful database the community needs to be able to filter results based on their desires and tastes. A poorly executed search function or one limited in scope will result in poor UX.
+3. **Tests performed**
+
+        - Searched for various terms that may or may not appear within the indexed fields. These varied from names of authors to genres and keywords that may have been included in a book description e.g. 'Mystery'
+        - After each successful search hit the reset button to test its functionality.
+        - Used keyword searches I knew were not in any current entries to see if correct flash message appeared.
+4. **Testing Results**
+
+        - When searching, each time results/entries which were applicable appeared as intended.
+        - Each hit of the Reset button correctly cleared the search data and returned the intitally listed entries.
+        - When searching for a term that wasn't present or applicable the correct message appeared to inform the user that their search garnered no results as intended.
+
+#### Home page - Collapsible card
+
+1. **Expected Results** 
+        
+        - When clicking on the collapsible header containing both book title and genre the collapsible body should appear to show further information about the entry.
+        - Upon clicking the purchase link within the card the user should be redirected to a new tab with the correct purchase link
+2. **Reasons for testing** 
+
+        - The data in which users will learn about new books and ultimately decide whether or not they are interested in them is contained within these collapsible cards. If these do not function correctly then the site does not meet it's intended purpose.
+        - The business model of the site is an affiliate based system and therefore correct working links to each shared book is of utmost importance.
+3. **Tests performed**
+
+        - Clicked on each and every entry to ensure that each one collapsed/extended correctly while the previously selected entry closed to execute good UI.
+        - Clicked each link to ensure that the user is directed to the purchase site in a new tab providing good UX.
+4. **Testing Results**
+
+        - When collapsing each field, the correct data appeared and was displayed intuitively and in a well laid out space.
+        - When visiting each purchase link the correct new tab and page opened ready for the selected book to be purchased.
+
+#### Profile page 
+
+1. **Expected Results** 
+        
+        - When viewing the profile page only the entries created by the current user should appear, allowing them to edit/remove their entry.
+        - When clicking 'Edit' the user should be redirected to the appropriate page
+        - When clicking 'Remove' the correct entry should be deleted from the site and also the link database.
+2. **Reasons for testing** 
+
+        - The ability to only see entries that the current user has made creates a better UX and allows for easier editing and removal of the intended entry. This functionality is essential to CRUD.
+3. **Tests performed**
+
+        - Logged in using multiple dummy accounts which has created different entries to ensure only entries created by that user account appeared.
+        - Clicked edit on each entry to ensure the user was directed to the correct edit template.
+        - Removed test entries from multiple accounts to ensure the selected entry was removed.
+4. **Testing Results**
+
+        - When visiting the user profile page on multiple accounts, the correct and appropriate entries appeared when filtering via the created user.
+        - Each use of the edit button resulted in the user being directed to the edit template as intended.
+        - Each use of the remove button resulted in the selected and associated entry being removed. Upon checking and referring back to MONGODB the entry was also removed from the database as intended.
+
+#### Share Book page
+
+1. **Expected Results** 
+        
+        - When visiting the share book navigation link the user should be directed to the correct template.
+        - When on the share book template and hovering over the field icons a tooltip should appear presenting further information/examples.
+        - When sharing a book if the user attempts to input incorrect data/values the field should display a message if the currently input data doesn't meet the field standards.
+        - When a user confirms the listing the user should be redirected to the home page with an accompanying success flash.
+        - When sharing a book if a user decides to cancel their entry they should be redirected to the home page.
+2. **Reasons for testing** 
+
+        - Search functionality is incredibly important as to be a useful database the community needs to be able to filter results based on their desires and tastes. A poorly executed search function or one limited in scope will result in poor UX.
+3. **Tests performed**
+
+        - Searched for various terms that may or may not appear within the indexed fields. These varied from names of authors to genres and keywords that may have been included in a book description e.g. 'Mystery'
+        - After each successful search hit the reset button to test its functionality.
+        - Used keyword searches I knew were not in any current entries to see if correct flash message appeared.
+4. **Testing Results**
+
+        - When searching, each time results/entries which were applicable appeared as intended.
+        - Each hit of the Reset button correctly cleared the search data and returned the intitally listed entries.
+        - When searching for a term that wasn't present or applicable the correct message appeared to inform the user that their search garnered no results as intended.
 
 
 ## Deployment
